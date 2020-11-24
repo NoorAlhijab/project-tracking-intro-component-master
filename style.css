@@ -26,7 +26,7 @@ a {
   max-width: 1440px;
   min-height: 100%;
   margin: 0 auto;
-  padding: 0 162px;
+  padding: 0 60px;
   overflow: hidden;
 }
 .header {
@@ -72,13 +72,15 @@ ul li a:hover {
 /* Content Styling */
 .content-container {
   display: flex;
+  justify-content: space-between;
   margin-top: 55px;
 }
 .content-container > div {
   flex: 1;
 }
+
 .left h1 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: 700;
   margin: 20px 0 25px;
   line-height: 50px;
@@ -136,6 +138,9 @@ p {
   .left {
     margin-top: 32px;
   }
+  .left h1 {
+    font-size: 2.5rem;
+  }
 
   .btn-demo {
     margin-bottom: 90px;
@@ -159,13 +164,15 @@ p {
     display: none;
   }
   ul {
-    display: none;
+    display: block;
     background-color: #fff;
-    position: absolute;
-    top: 10%;
+    position: fixed;
+    top: 14%;
     right: 10%;
     width: calc(100% - 20%);
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    transform: translateX(150%);
+    transition: transform 0.8s ease-in-out;
   }
   ul li {
     margin: 30 auto;
@@ -191,7 +198,8 @@ p {
   }
 }
 nav.show ul {
-  display: block;
+  /* display: block; */
+  transform: translateX(0);
 }
 nav.show .icon-hamburger {
   display: none;
